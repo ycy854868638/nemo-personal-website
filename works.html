@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<style>html{background:#000;}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>系列作品 · 杨创宇 Nemo 爱拍照</title>
+<meta name="description" content="杨创宇（Nemo爱拍照）系列作品：星空、城市与自然，按分类浏览全部作品。">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="style.css?v=20260906sc">
+</head>
+<body data-page="works">
+
+<!-- ===== 导航 ===== -->
+<nav class="nav" aria-label="主导航">
+  <a class="brand" href="index.html" aria-label="返回首页">
+    <img class="brand-mark" src="works/brand/stargazer_logo_gold2.png" alt="杨创宇 Nemo 爱拍照">
+    <span>
+      <span class="brand-name">杨创宇</span>
+      <span class="brand-sub">Nemo 爱拍照</span>
+    </span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">首页</a>
+    <a href="works.html">系列作品</a>
+      <div class="nav-item nav-drop" id="dropWorks">
+    <a class="nav-drop-btn" href="works.html">作品<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+    <div class="nav-drop-menu">
+      <a href="star.html">星空<span class="cd-en">STAR</span></a>
+      <a href="city.html">城市<span class="cd-en">CITY</span></a>
+      <a href="nature.html">自然<span class="cd-en">NATURE</span></a>
+      <a href="films.html">旅拍<span class="cd-en">TRAVEL</span></a>
+    </div>
+  </div>
+    <a href="films.html">视频</a>
+      <div class="nav-item nav-drop" id="dropTutorial">
+    <a class="nav-drop-btn" href="tutorial.html">教程<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+    <div class="nav-drop-menu">
+      <a href="tutorial.html#pre">前期教程<span class="cd-en">PRE</span></a>
+      <a href="tutorial.html#post">后期教程<span class="cd-en">POST</span></a>
+      <a href="tutorial.html">全部教程<span class="cd-en">ALL</span></a>
+    </div>
+  </div>
+    <a href="commercial.html">合作</a>
+    <a href="about.html">关于</a>
+    <div class="search-box" id="searchBox">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="searchInput" placeholder="搜索…" autocomplete="off" aria-label="全站搜索">
+        <div class="search-results" id="searchResults" role="listbox"></div>
+      </div>
+  </div>
+</nav>
+
+<!-- ===== 系列作品（入口）===== -->
+<main class="works" id="works">
+  <div class="wrap">
+    <div class="page-hero reveal">
+      <span class="kicker">Selected Series</span>
+      <h1 class="ph-title">系列作品</h1>
+      <p class="ph-sub">从银河到城市灯火，从山川到旅途影像</p>
+    </div>
+
+<!-- ===== 日照金山 · 海拔爬升（窗口式） ===== -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+  .hubei-stars{width:100%;max-width:1100px}
+  .hs-head{text-align:center;margin-bottom:28px}
+  .hs-kicker{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.35em;color:#d2973f;margin-bottom:10px}
+  .hs-title{font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:.08em;color:#f0ede6;margin-bottom:8px}
+  .hs-sub{font-size:13px;color:#8a8780;letter-spacing:.05em}
+
+  .hs-window{position:relative;width:100%;height:clamp(380px,52vh,560px);border-radius:14px;overflow:hidden;border:1px solid rgba(210,151,63,.18);box-shadow:0 20px 60px rgba(0,0,0,.5);background:#0d1119}
+  .hs-window{scrollbar-width:none;-ms-overflow-style:none}
+  .hs-window::-webkit-scrollbar{display:none}
+
+  .hs-slides{position:absolute;inset:0}
+  .hs-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;pointer-events:none}
+  .hs-slide.active{opacity:1;pointer-events:auto}
+  .hs-slide img{width:100%;height:100%;object-fit:cover;display:block}
+  .hs-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,10,14,.88) 0%,rgba(8,10,14,.5) 35%,rgba(8,10,14,.15) 65%,transparent 100%)}
+
+  .hs-info{position:absolute;left:3vw;bottom:5vh;z-index:5;max-width:55%}
+  .hs-region{font-size:clamp(16px,1.8vw,24px);color:#fff;margin-top:6px;font-weight:500;letter-spacing:.05em}
+  .hs-region::before{display:none}
+  .hs-name{font-size:clamp(28px,3.5vw,48px);font-weight:700;color:#d2973f;letter-spacing:1px;line-height:1.1}
+  .hs-alt{font-size:11px;color:rgba(255,255,255,.55);margin-top:4px;letter-spacing:1px}
+  .hs-meta{font-size:13px;color:#b8b5ae;line-height:2;letter-spacing:.03em;margin-bottom:14px}
+  .hs-meta span{display:block}
+  .hs-meta strong{color:#e8e6e1;font-weight:500;margin-right:8px}
+  .hs-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hs-tag{padding:4px 12px;border:1px solid rgba(210,151,63,.25);border-radius:20px;font-size:10.5px;color:#d2973f;letter-spacing:.08em;font-family:'Courier New',monospace}
+
+  .hs-index{position:absolute;right:clamp(24px,5vw,60px);top:50%;transform:translateY(-50%);z-index:4;font-size:clamp(80px,14vw,160px);font-weight:700;color:rgba(210,151,63,.07);font-family:'Georgia',serif;line-height:1;user-select:none}
+
+  .hs-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:44px;height:44px;border-radius:50%;border:1px solid rgba(210,151,63,.25);background:rgba(10,12,16,.5);backdrop-filter:blur(8px);color:#d2973f;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:18px}
+  .hs-arrow:hover{background:rgba(210,151,63,.15);border-color:rgba(210,151,63,.5)}
+  .hs-arrow.prev{left:16px}
+  .hs-arrow.next{right:16px}
+
+  .hs-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:24px;align-items:center}
+  .hs-dot{display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;opacity:.4;transition:opacity .3s}
+  .hs-dot.active{opacity:1}
+  .hs-dot-circle{width:8px;height:8px;border-radius:50%;background:#666;transition:all .3s}
+  .hs-dot.active .hs-dot-circle{background:#d2973f;box-shadow:0 0 10px rgba(210,151,63,.5);transform:scale(1.3)}
+  .hs-dot-label{font-size:10px;letter-spacing:.1em;color:#999;font-family:'Courier New',monospace;white-space:nowrap}
+  .hs-dot.active .hs-dot-label{color:#d2973f}
+
+  .hs-hint{text-align:center;margin-top:16px;font-size:11px;color:#666;letter-spacing:.1em}
+</style>
+
+<div class="hubei-stars">
+  <div class="hs-head">
+    <div class="hs-kicker">HUBEI · STARRY SKIES</div>
+    <h2 class="hs-title">湖北星空</h2>
+    <p class="hs-sub">华中观星地图 · 左右切换浏览每一处暗夜</p>
+  </div>
+
+  <div class="hs-window" id="hsWindow">
+    <div class="hs-slides" id="hsSlides"></div>
+    <div class="hs-info" id="hsInfo"></div>
+    <div class="hs-index" id="hsIndex">01</div>
+    <button class="hs-arrow prev" id="hsPrev">&#10094;</button>
+    <button class="hs-arrow next" id="hsNext">&#10095;</button>
+    <div class="hs-dots" id="hsDots"></div>
+  </div>
+  <div class="hs-hint">← → 方向键或点击箭头切换 · 湖北六大观星地</div>
+</div>
+<script>
+(function(){
+const SPOTS = [
+  {region:'湖北 · 咸宁通山', name:'九宫山', alt:'海拔 1657m', coord:'', season:'', tags:['高山草甸','星空胜地'], img:'works/hubei-stars/九宫山.jpg'},
+  {region:'湖北 · 孝感大悟', name:'仙居顶', alt:'海拔 608m', coord:'', season:'', tags:['风车云海','露营观星'], img:'works/hubei-stars/仙居顶.jpg'},
+  {region:'湖北 · 咸宁崇阳', name:'古堰湾', alt:'', coord:'', season:'', tags:['千年古堰','溪谷瀑布'], img:'works/hubei-stars/古堰湾.jpg'},
+  {region:'湖北 · 随州随县', name:'大洪山', alt:'海拔 1055m', coord:'', season:'', tags:['楚北第一峰','森林氧吧'], img:'works/hubei-stars/大洪山.jpg'},
+  {region:'湖北 · 黄石阳新', name:'富水水库', alt:'', coord:'', season:'', tags:['千岛之湖','湿地星空'], img:'works/hubei-stars/富水水库.jpg'},
+  {region:'湖北 · 黄石阳新', name:'富水湖', alt:'', coord:'', season:'', tags:['湖光山色','日落星空'], img:'works/hubei-stars/富水水库 (2).jpg'},
+  {region:'湖北 · 神农架林区', name:'神农架', alt:'', coord:'', season:'', tags:['原始森林','暗夜公园'], img:'works/hubei-stars/神农架.jpg'},
+  {region:'湖北 · 咸宁通山', name:'通山', alt:'', coord:'', season:'', tags:['幕阜山脉','乡村暗夜'], img:'works/hubei-stars/通山县.jpg'},
+  {region:'湖北 · 黄冈蕲春', name:'雾云山梯田', alt:'海拔 800m', coord:'', season:'', tags:['大地指纹','梯田星空'], img:'works/hubei-stars/雾云山梯田.jpg'},
+  {region:'湖北 · 黄冈蕲春', name:'雾云山茶园', alt:'海拔 800m', coord:'', season:'', tags:['高山茶园','茶源星空'], img:'works/hubei-stars/雾云山茶园.jpg'}
+];
+
+let cur = 0;
+const slidesEl = document.getElementById('hsSlides');
+const infoEl = document.getElementById('hsInfo');
+const indexEl = document.getElementById('hsIndex');
+const dotsEl = document.getElementById('hsDots');
+
+SPOTS.forEach((s, i) => {
+  const slide = document.createElement('div');
+  slide.className = 'hs-slide' + (i === 0 ? ' active' : '');
+  slide.innerHTML = '<img src="' + s.img + '" alt="' + s.name + '">';
+  slidesEl.appendChild(slide);
+
+  const dot = document.createElement('div');
+  dot.className = 'hs-dot' + (i === 0 ? ' active' : '');
+  dot.innerHTML = '<div class="hs-dot-circle"></div><div class="hs-dot-label">' + s.name + '</div>';
+  dot.addEventListener('click', () => goTo(i));
+  dotsEl.appendChild(dot);
+});
+
+function render() {
+  const s = SPOTS[cur];
+  document.querySelectorAll('.hs-slide').forEach((el, i) => el.classList.toggle('active', i === cur));
+  document.querySelectorAll('.hs-dot').forEach((el, i) => el.classList.toggle('active', i === cur));
+  let html = '<div class="hs-name">' + s.name + '</div>';
+  html += '<div class="hs-region">' + s.region + '</div>';
+  if (s.tags && s.tags.length > 0) {
+    html += '<div class="hs-tags">' + s.tags.map(t => '<span class="hs-tag">' + t + '</span>').join('') + '</div>';
+  }
+  infoEl.innerHTML = html;
+  indexEl.textContent = String(cur + 1).padStart(2, '0');
+}
+
+function goTo(i) { cur = (i + SPOTS.length) % SPOTS.length; render(); }
+
+document.getElementById('hsPrev').addEventListener('click', () => goTo(cur - 1));
+document.getElementById('hsNext').addEventListener('click', () => goTo(cur + 1));
+document.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') goTo(cur - 1); if (e.key === 'ArrowRight') goTo(cur + 1); });
+
+let touchX = 0;
+document.getElementById('hsWindow').addEventListener('touchstart', e => touchX = e.touches[0].clientX);
+document.getElementById('hsWindow').addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 50) goTo(cur + (dx < 0 ? 1 : -1));
+});
+
+render();
+})();
+</script>
+
+<section class="golden-peaks" id="goldenPeaks">
+  <div class="gp-head wrap">
+    <span class="kicker">Snow Peak Collection</span>
+    <h2 class="gp-title">雪山收集计划</h2>
+    <p class="gp-sub">按海拔从低到高排列 · 在窗口内滚动鼠标滚轮，攀登每一座雪峰</p>
+  </div>
+
+  <div class="wrap">
+    <div class="gp-window" id="gpWindow">
+      <div class="gp-window-inner" id="gpWindowInner">
+        <div class="gp-viewport" id="gpViewport">
+          <div class="gp-counter" id="gpCounter">01</div>
+          <div class="gp-info" id="gpInfo">
+            <div class="gp-alt" id="gpAlt">0<span class="gp-unit">m</span></div>
+            <div class="gp-name" id="gpName">雪山名称</div>
+            <div class="gp-loc" id="gpLoc">拍摄地点</div>
+          </div>
+          <div class="gp-scale" id="gpScale">
+            <div class="gp-track" id="gpTrack" style="height:0%"></div>
+            <div class="gp-dot" id="gpDot" style="bottom:0%"></div>
+          </div>
+          <div class="gp-hint">
+            <div class="gp-hint-line"></div>
+            <div class="gp-hint-text">Scroll inside</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="gp-window-note">↑ 窗口内滚动切换海拔 · 窗口外正常浏览页面</p>
+  </div>
+</section>
+
+<style>
+.golden-peaks{background:#000;padding:clamp(50px,7vw,100px) 0;position:relative}
+.gp-head{text-align:center;margin-bottom:clamp(24px,3vw,40px)}
+.gp-head .kicker{font-size:11px;letter-spacing:.35em;color:#d2973f;text-transform:uppercase;display:block;margin-bottom:12px}
+.gp-title{font-size:clamp(28px,4.5vw,48px);font-weight:900;color:#f0e8d8;letter-spacing:.08em;font-family:'Noto Serif SC',serif}
+.gp-sub{font-size:13px;color:rgba(232,224,208,.45);margin-top:10px;letter-spacing:.08em}
+
+/* ===== 窗口 ===== */
+.gp-window{
+  width:100%;max-width:1100px;margin:0 auto;
+  height:clamp(380px,52vh,560px);
+  border-radius:14px;overflow-y:auto;overflow-x:hidden;
+  border:1px solid rgba(210,151,63,.18);
+  box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 0 1px rgba(210,151,63,.05) inset;
+  scroll-behavior:auto;
+}
+.gp-window{scrollbar-width:none;-ms-overflow-style:none}
+.gp-window::-webkit-scrollbar{display:none;width:0;height:0}
+.gp-window-inner{position:relative}
+.gp-viewport{
+  position:sticky;top:0;
+  height:clamp(380px,52vh,560px);
+  width:100%;overflow:hidden;background:#0a0a0a;
+}
+.gp-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);transition:opacity 1s ease,transform 5s ease-out;will-change:opacity,transform}
+.gp-bg.active{opacity:1;transform:scale(1)}
+.gp-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.72) 0%,rgba(0,0,0,.2) 45%,rgba(0,0,0,.08) 100%),linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 40%)}
+
+.gp-counter{position:absolute;top:50%;right:5vw;transform:translateY(-50%);z-index:5;font-size:clamp(70px,10vw,130px);font-weight:900;color:rgba(210,151,63,.05);line-height:1;pointer-events:none;font-family:'Noto Serif SC',serif}
+
+.gp-info{position:absolute;left:3vw;bottom:5vh;z-index:10;max-width:55%}
+.gp-alt{font-size:clamp(28px,3.5vw,48px);font-weight:900;color:#d2973f;line-height:1;letter-spacing:-.02em;font-family:'Noto Serif SC',serif;opacity:0;transform:translateY(18px);transition:opacity .7s ease .15s,transform .7s ease .15s}
+.gp-alt .gp-unit{font-size:.35em;font-weight:400;color:rgba(210,151,63,.7);margin-left:6px;letter-spacing:.1em}
+.gp-name{font-size:clamp(16px,1.8vw,24px);font-weight:700;color:#f0e8d8;margin-top:6px;letter-spacing:.05em;opacity:0;transform:translateY(14px);transition:opacity .7s ease .28s,transform .7s ease .28s}
+.gp-loc{font-size:11px;color:rgba(232,224,208,.5);margin-top:4px;letter-spacing:.12em;opacity:0;transform:translateY(10px);transition:opacity .7s ease .4s,transform .7s ease .4s}
+.gp-info.show .gp-alt,.gp-info.show .gp-name,.gp-info.show .gp-loc{opacity:1;transform:translateY(0)}
+
+.gp-scale{position:absolute;right:4vw;top:50%;transform:translateY(-50%);z-index:10;height:55%;width:2px;background:rgba(232,224,208,.1)}
+.gp-track{position:absolute;left:0;bottom:0;width:100%;background:linear-gradient(to top,#d2973f,#e6a84b);transition:height .7s cubic-bezier(.22,1,.36,1)}
+.gp-dot{position:absolute;left:50%;transform:translate(-50%,50%);width:10px;height:10px;border-radius:50%;background:#d2973f;box-shadow:0 0 12px rgba(210,151,63,.6);transition:bottom .7s cubic-bezier(.22,1,.36,1)}
+.gp-tick{position:absolute;right:14px;transform:translateY(-50%);font-size:10px;color:rgba(232,224,208,.3);letter-spacing:.08em;white-space:nowrap;transition:color .3s}
+.gp-tick.active{color:#d2973f}
+
+.gp-hint{position:absolute;bottom:3vh;left:50%;transform:translateX(-50%);z-index:10;text-align:center}
+.gp-hint-line{width:1px;height:28px;background:linear-gradient(to bottom,#d2973f,transparent);margin:0 auto 6px;animation:gpPulse 2s ease-in-out infinite}
+.gp-hint-text{font-size:9px;letter-spacing:.25em;color:rgba(232,224,208,.35);text-transform:uppercase}
+@keyframes gpPulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+.gp-window-note{text-align:center;font-size:11px;color:rgba(232,224,208,.3);margin-top:14px;letter-spacing:.1em}
+
+@media (max-width:768px){
+  .gp-info{left:3vw;bottom:4vh;max-width:65%}
+  .gp-scale{right:3vw}
+  .gp-counter{right:3vw;font-size:60px}
+  .gp-tick{font-size:9px;right:10px}
+}
+</style>
+
+<script>
+(function(){
+  var PEAKS = [
+    { name: '玉龙雪山', altitude: 5596, location: '云南 · 丽江', img: 'works/golden-peaks/玉龙雪山.jpg' },
+    { name: '缅茨姆峰', altitude: 6054, location: '云南 · 德钦', img: 'works/golden-peaks/缅茨姆.jpg' },
+    { name: '冈仁波齐峰', altitude: 6656, location: '西藏 · 普兰', img: 'works/golden-peaks/冈仁波齐.jpg' },
+    { name: '阿玛直米峰', altitude: 6669, location: '西藏 · 定结', img: 'works/golden-peaks/阿玛直米.jpg' },
+    { name: '卡瓦格博峰', altitude: 6740, location: '云南 · 德钦', img: 'works/golden-peaks/卡瓦格博.jpg' },
+    { name: '念青唐古拉峰', altitude: 7162, location: '西藏 · 当雄', img: 'works/golden-peaks/念青唐古拉.jpg' },
+    { name: '贡嘎山', altitude: 7509, location: '四川 · 康定', img: 'works/golden-peaks/贡嘎群峰.jpg' },
+    { name: '纳木那尼峰', altitude: 7694, location: '西藏 · 普兰', img: 'works/golden-peaks/那木纳尼.jpg' },
+    { name: '南迦巴瓦峰', altitude: 7782, location: '西藏 · 林芝', img: 'works/golden-peaks/南迦巴瓦 .jpg' },
+    { name: '希夏邦马峰', altitude: 8027, location: '西藏 · 聂拉木', img: 'works/golden-peaks/希夏邦马.jpg' },
+    { name: '卓奥友峰', altitude: 8201, location: '西藏 · 定日', img: 'works/golden-peaks/卓奥友.jpg' },
+    { name: '珠穆朗玛峰', altitude: 8848, location: '西藏 · 定日', img: 'works/golden-peaks/珠峰.jpg' }
+  ];
+
+  var winEl = document.getElementById('gpWindow');
+  var innerEl = document.getElementById('gpWindowInner');
+  var viewport = document.getElementById('gpViewport');
+  var infoEl = document.getElementById('gpInfo');
+  var altEl = document.getElementById('gpAlt');
+  var nameEl = document.getElementById('gpName');
+  var locEl = document.getElementById('gpLoc');
+  var trackEl = document.getElementById('gpTrack');
+  var dotEl = document.getElementById('gpDot');
+  var counterEl = document.getElementById('gpCounter');
+  var scaleEl = document.getElementById('gpScale');
+  if(!winEl || !viewport) return;
+
+  // 窗口内部高度 = N * 窗口高度
+  var vh = viewport.offsetHeight;
+  innerEl.style.height = (PEAKS.length * vh) + 'px';
+
+  PEAKS.forEach(function(p, i){
+    var bg = document.createElement('div');
+    bg.className = 'gp-bg' + (i === 0 ? ' active' : '');
+    bg.style.backgroundImage = "url('" + p.img + "')";
+    viewport.appendChild(bg);
+    var tick = document.createElement('div');
+    tick.className = 'gp-tick' + (i === 0 ? ' active' : '');
+    tick.textContent = p.altitude + 'm';
+    tick.style.bottom = (PEAKS.length > 1 ? i / (PEAKS.length - 1) * 100 : 0) + '%';
+    scaleEl.appendChild(tick);
+  });
+
+  var currentIndex = -1;
+  function update(){
+    var total = innerEl.offsetHeight - winEl.clientHeight;
+    var scrolled = Math.min(Math.max(winEl.scrollTop, 0), total);
+    var progress = total > 0 ? scrolled / total : 0;
+    var idx = Math.min(Math.floor(progress * PEAKS.length), PEAKS.length - 1);
+
+    if(idx !== currentIndex){
+      currentIndex = idx;
+      var p = PEAKS[idx];
+      var bgs = viewport.querySelectorAll('.gp-bg');
+      for(var b = 0; b < bgs.length; b++) bgs[b].classList.toggle('active', b === idx);
+      infoEl.classList.remove('show');
+      setTimeout(function(){
+        altEl.innerHTML = p.altitude.toLocaleString() + '<span class="gp-unit">m</span>';
+        nameEl.textContent = p.name;
+        locEl.textContent = p.location;
+        counterEl.textContent = String(idx + 1).padStart(2, '0');
+        infoEl.classList.add('show');
+      }, 250);
+      var ticks = scaleEl.querySelectorAll('.gp-tick');
+      for(var t = 0; t < ticks.length; t++) ticks[t].classList.toggle('active', t === idx);
+    }
+    trackEl.style.height = (progress * 100) + '%';
+    dotEl.style.bottom = (progress * 100) + '%';
+  }
+
+  winEl.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', function(){
+    vh = viewport.offsetHeight;
+    innerEl.style.height = (PEAKS.length * vh) + 'px';
+    update();
+  });
+  update();
+  setTimeout(function(){ infoEl.classList.add('show'); }, 400);
+})();
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+  
+  
+
+  /* ===== 组件容器 ===== */
+  .flower-city{width:100%;max-width:1100px}
+  .fc-head{text-align:center;margin-bottom:28px}
+  .fc-kicker{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.35em;color:#d2973f;margin-bottom:10px}
+  .fc-title{font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:.08em;color:#f0ede6;margin-bottom:8px}
+  .fc-sub{font-size:13px;color:#8a8780;letter-spacing:.05em}
+
+  /* ===== 窗口 ===== */
+  .fc-window{position:relative;width:100%;height:clamp(380px,52vh,560px);border-radius:14px;overflow:hidden;border:1px solid rgba(210,151,63,.18);box-shadow:0 20px 60px rgba(0,0,0,.5);background:#0d1119}
+  .fc-window{scrollbar-width:none;-ms-overflow-style:none}
+  .fc-window::-webkit-scrollbar{display:none}
+
+  /* 背景图层 */
+  .fc-slides{position:absolute;inset:0}
+  .fc-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;pointer-events:none}
+  .fc-slide.active{opacity:1;pointer-events:auto}
+  .fc-slide img{width:100%;height:100%;object-fit:cover;display:block}
+  .fc-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,10,14,.88) 0%,rgba(8,10,14,.5) 35%,rgba(8,10,14,.15) 65%,transparent 100%)}
+
+  /* 左侧信息 */
+  .fc-info{position:absolute;left:3vw;bottom:5vh;z-index:5;max-width:55%}
+  .fc-season{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.3em;color:#d2973f;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+  .fc-season::before{display:none}
+  .fc-flower{font-size:clamp(28px,3.5vw,48px);font-weight:700;color:#d2973f;letter-spacing:1px;line-height:1.1}
+  .fc-latin{font-family:'Courier New',monospace;font-size:12px;letter-spacing:.2em;color:#8a8780;margin-bottom:18px}
+  .fc-location{font-size:clamp(16px,1.8vw,24px);color:#fff;margin-top:6px;font-weight:500;letter-spacing:.05em}
+  .fc-location span{display:inline-block;margin-right:16px}
+  .fc-bloom{display:inline-block;margin-top:14px;padding:5px 14px;border:1px solid rgba(210,151,63,.3);border-radius:20px;font-size:11px;color:#d2973f;letter-spacing:.1em;font-family:'Courier New',monospace}
+
+  /* 序号大字 */
+  .fc-index{position:absolute;right:clamp(24px,5vw,60px);top:50%;transform:translateY(-50%);z-index:4;font-size:clamp(80px,14vw,160px);font-weight:700;color:rgba(210,151,63,.07);font-family:'Georgia',serif;line-height:1;user-select:none}
+
+  /* 左右箭头 */
+  .fc-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:44px;height:44px;border-radius:50%;border:1px solid rgba(210,151,63,.25);background:rgba(10,12,16,.5);backdrop-filter:blur(8px);color:#d2973f;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:18px}
+  .fc-arrow:hover{background:rgba(210,151,63,.15);border-color:rgba(210,151,63,.5)}
+  .fc-arrow.prev{left:16px}
+  .fc-arrow.next{right:16px}
+
+  /* 底部四季进度 */
+  .fc-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:28px;align-items:center}
+  .fc-dot{display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;opacity:.4;transition:opacity .3s}
+  .fc-dot.active{opacity:1}
+  .fc-dot-circle{width:8px;height:8px;border-radius:50%;background:#666;transition:all .3s}
+  .fc-dot.active .fc-dot-circle{background:#d2973f;box-shadow:0 0 10px rgba(210,151,63,.5);transform:scale(1.3)}
+  .fc-dot-label{font-size:10px;letter-spacing:.15em;color:#999;font-family:'Courier New',monospace;white-space:nowrap}
+  .fc-dot.active .fc-dot-label{color:#d2973f}
+
+  /* 底部提示 */
+  .fc-hint{text-align:center;margin-top:16px;font-size:11px;color:#666;letter-spacing:.1em}
+</style>
+
+<div class="flower-city">
+  <div class="fc-head">
+    <div class="fc-kicker">WUHAN · FLOWERS &amp; CITY</div>
+    <h2 class="fc-title">花与城</h2>
+    <p class="fc-sub">四季轮转 · 花开江城 · 左右切换浏览每一季节</p>
+  </div>
+
+  <div class="fc-window" id="fcWindow">
+    <div class="fc-slides" id="fcSlides"></div>
+    <div class="fc-info" id="fcInfo"></div>
+    <div class="fc-index" id="fcIndex">01</div>
+    <button class="fc-arrow prev" id="fcPrev">&#10094;</button>
+    <button class="fc-arrow next" id="fcNext">&#10095;</button>
+    <div class="fc-dots" id="fcDots"></div>
+  </div>
+  <div class="fc-hint">← → 方向键或点击箭头切换 · 四季花期</div>
+</div>
+<script>
+(function(){
+const SEASONS = [
+  {flower:'东湖樱花园', location:'武汉 · 武昌', img:'works/flower-city/东湖樱花园.jpg'},
+  {flower:'古德寺', location:'武汉 · 江岸', img:'works/flower-city/古德寺.jpg'},
+  {flower:'汉江湾桥', location:'武汉 · 硚口', img:'works/flower-city/汉江湾桥.jpg'},
+  {flower:'沙湖天际线', location:'武汉 · 武昌', img:'works/flower-city/沙湖天际线.jpg'},
+  {flower:'西北湖天际线', location:'武汉 · 江汉', img:'works/flower-city/西北湖天际线.jpg'},
+  {flower:'鹦鹉洲大桥', location:'武汉 · 汉阳', img:'works/flower-city/鹦鹉洲大桥.jpg'}
+];
+
+let cur = 0;
+const slidesEl = document.getElementById('fcSlides');
+const infoEl = document.getElementById('fcInfo');
+const indexEl = document.getElementById('fcIndex');
+const dotsEl = document.getElementById('fcDots');
+
+// 构建幻灯片
+SEASONS.forEach((s, i) => {
+  const slide = document.createElement('div');
+  slide.className = 'fc-slide' + (i === 0 ? ' active' : '');
+  slide.innerHTML = '<img src="' + s.img + '" alt="' + s.flower + '">';
+  slidesEl.appendChild(slide);
+
+  const dot = document.createElement('div');
+  dot.className = 'fc-dot' + (i === 0 ? ' active' : '');
+  dot.innerHTML = '<div class="fc-dot-circle"></div><div class="fc-dot-label">' + s.flower + '</div>';
+  dot.addEventListener('click', () => goTo(i));
+  dotsEl.appendChild(dot);
+});
+
+function render() {
+  const s = SEASONS[cur];
+  document.querySelectorAll('.fc-slide').forEach((el, i) => el.classList.toggle('active', i === cur));
+  document.querySelectorAll('.fc-dot').forEach((el, i) => el.classList.toggle('active', i === cur));
+  let html = '<div class="fc-flower">' + s.flower + '</div>';
+  html += '<div class="fc-location">' + s.location + '</div>';
+  infoEl.innerHTML = html;
+  indexEl.textContent = String(cur + 1).padStart(2, '0');
+}
+
+function goTo(i) { cur = (i + SEASONS.length) % SEASONS.length; render(); }
+
+document.getElementById('fcPrev').addEventListener('click', () => goTo(cur - 1));
+document.getElementById('fcNext').addEventListener('click', () => goTo(cur + 1));
+document.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') goTo(cur - 1); if (e.key === 'ArrowRight') goTo(cur + 1); });
+
+// 触摸滑动
+let touchX = 0;
+document.getElementById('fcWindow').addEventListener('touchstart', e => touchX = e.touches[0].clientX);
+document.getElementById('fcWindow').addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 50) goTo(cur + (dx < 0 ? 1 : -1));
+});
+
+render();
+})();
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+  
+  
+
+  /* ===== 组件容器 ===== */
+  .wuhan-bridges{width:100%;max-width:1100px}
+  .wb-head{text-align:center;margin-bottom:28px}
+  .wb-kicker{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.35em;color:#d2973f;margin-bottom:10px}
+  .wb-title{font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:.08em;color:#f0ede6;margin-bottom:8px}
+  .wb-sub{font-size:13px;color:#8a8780;letter-spacing:.05em}
+
+  /* ===== 窗口 ===== */
+  .wb-window{position:relative;width:100%;height:clamp(380px,52vh,560px);border-radius:14px;overflow-y:auto;overflow-x:hidden;border:1px solid rgba(210,151,63,.18);box-shadow:0 20px 60px rgba(0,0,0,.5);background:#0d1119;scroll-behavior:smooth}
+  .wb-window{scrollbar-width:none;-ms-overflow-style:none}
+  .wb-window::-webkit-scrollbar{display:none}
+
+  /* 每个桥的滚动段 */
+  .wb-panel{position:relative;width:100%;height:100%;flex-shrink:0;overflow:hidden}
+  .wb-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s ease}
+  .wb-panel::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,16,.8) 0%,rgba(10,12,16,.4) 50%,rgba(10,12,16,.15) 100%)}
+
+  /* 左侧信息 */
+  .wb-info{position:absolute;left:clamp(24px,4vw,48px);top:50%;transform:translateY(-50%);z-index:5;max-width:50%}
+  .wb-year{font-family:'Georgia',serif;font-size:clamp(48px,8vw,84px);font-weight:700;color:#d2973f;line-height:1;margin-bottom:4px;letter-spacing:-.02em}
+  .wb-year-label{font-family:'Courier New',monospace;font-size:10px;letter-spacing:.3em;color:rgba(210,151,63,.6);margin-bottom:14px}
+  .wb-name{font-size:clamp(24px,3.5vw,36px);font-weight:600;color:#f0ede6;letter-spacing:.06em;margin-bottom:10px;line-height:1.2}
+  .wb-type{display:inline-block;padding:4px 12px;border:1px solid rgba(210,151,63,.25);border-radius:4px;font-size:11px;color:#d2973f;letter-spacing:.1em;margin-bottom:14px;font-family:'Courier New',monospace}
+  .wb-meta{font-size:13px;color:#b8b5ae;line-height:2;letter-spacing:.03em}
+  .wb-meta span{display:block}
+  .wb-meta strong{color:#e8e6e1;font-weight:500;margin-right:8px}
+  .wb-note{margin-top:14px;font-size:12px;color:#8a8780;line-height:1.7;font-style:italic;border-left:2px solid rgba(210,151,63,.3);padding-left:12px}
+
+  /* 右侧年份时间轴 */
+  .wb-timeline{position:absolute;right:clamp(20px,3vw,36px);top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;align-items:center;gap:0}
+  .wb-tl-line{width:1px;height:100%;background:linear-gradient(to bottom,rgba(210,151,63,.05),rgba(210,151,63,.2),rgba(210,151,63,.05));position:absolute;top:0;left:50%;transform:translateX(-50%)}
+  .wb-tl-item{position:relative;display:flex;align-items:center;gap:10px;padding:10px 0;cursor:pointer;opacity:.35;transition:opacity .3s}
+  .wb-tl-item.active{opacity:1}
+  .wb-tl-dot{width:8px;height:8px;border-radius:50%;background:#555;transition:all .3s;flex-shrink:0;position:relative;z-index:1}
+  .wb-tl-item.active .wb-tl-dot{background:#d2973f;box-shadow:0 0 12px rgba(210,151,63,.6);transform:scale(1.4)}
+  .wb-tl-year{font-family:'Courier New',monospace;font-size:10px;color:#888;letter-spacing:.1em;white-space:nowrap;text-align:right;width:36px}
+  .wb-tl-item.active .wb-tl-year{color:#d2973f}
+
+  /* 序号大字 */
+  .wb-index{position:absolute;right:clamp(60px,8vw,100px);top:50%;transform:translateY(-50%);z-index:4;font-size:clamp(80px,14vw,160px);font-weight:700;color:rgba(210,151,63,.06);font-family:'Georgia',serif;line-height:1;user-select:none}
+
+  /* 底部提示 */
+  .wb-hint{text-align:center;margin-top:16px;font-size:11px;color:#666;letter-spacing:.1em}
+</style>
+
+    <!-- NEXT 导航 -->
+    <div class="next-bar reveal">
+      <div>
+        <div class="nb-label">NEXT · 下一栏目</div>
+        <div class="nb-title">旅拍视频</div>
+      </div>
+      <a class="nb-link" href="films.html">进入旅拍
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="signature reveal">杨创宇 · Nemo 爱拍照<span>NIGHT IS MY STUDIO</span></div>
+  </div>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="wrap">
+      <div class="footer-main">
+      <div class="footer-brand">
+        <div class="name">杨创宇 · Nemo 爱拍照</div>
+        <p>记录夜空与城市里的光 · 常驻武汉 · 长期追星中</p>
+      </div>
+      <div class="footer-social">
+        <a class="social-link" href="https://weibo.com/u/6594337965" target="_blank" rel="noopener">微博</a>
+        <a class="social-link" href="https://v.douyin.com/t9dT2E6qMxQ/" target="_blank" rel="noopener">抖音</a>
+<a class="social-link" href="https://space.bilibili.com/281006014" target="_blank" rel="noopener">Bilibili</a>
+        <a class="social-link" href="https://xhslink.cn/m/5yzmBNRY4lk" target="_blank" rel="noopener">小红书</a>
+</div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 杨创宇 · 保留所有权利</span>
+      <span>NIGHT IS MY STUDIO</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="app.js?v=20260905e"></script>
+</body>
+</html>
+

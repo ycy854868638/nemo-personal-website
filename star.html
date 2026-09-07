@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<style>html{background:#000;}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星空 · 杨创宇 Nemo 爱拍照</title>
+<meta name="description" content="杨创宇（Nemo爱拍照）星空系列：银河、星轨、流星雨、彗星与深空摄影。">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="style.css?v=20260906sc">
+</head>
+<body data-page="works">
+
+<!-- ===== 导航 ===== -->
+<nav class="nav" aria-label="主导航">
+  <a class="brand" href="index.html" aria-label="返回首页">
+    <img class="brand-mark" src="works/brand/stargazer_logo_gold2.png" alt="杨创宇 Nemo 爱拍照">
+    <span>
+      <span class="brand-name">杨创宇</span>
+      <span class="brand-sub">Nemo 爱拍照</span>
+    </span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">首页</a>
+    <a href="works.html">系列作品</a>
+      <div class="nav-item nav-drop" id="dropWorks">
+    <a class="nav-drop-btn" href="works.html">作品<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+    <div class="nav-drop-menu">
+      <a href="star.html">星空<span class="cd-en">STAR</span></a>
+      <a href="city.html">城市<span class="cd-en">CITY</span></a>
+      <a href="nature.html">自然<span class="cd-en">NATURE</span></a>
+      <a href="films.html">旅拍<span class="cd-en">TRAVEL</span></a>
+    </div>
+  </div>
+    <a href="films.html">视频</a>
+      <div class="nav-item nav-drop" id="dropTutorial">
+    <a class="nav-drop-btn" href="tutorial.html">教程<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+    <div class="nav-drop-menu">
+      <a href="tutorial.html#pre">前期教程<span class="cd-en">PRE</span></a>
+      <a href="tutorial.html#post">后期教程<span class="cd-en">POST</span></a>
+      <a href="tutorial.html">全部教程<span class="cd-en">ALL</span></a>
+    </div>
+  </div>
+    <a href="commercial.html">合作</a>
+    <a href="about.html">关于</a>
+    <div class="search-box" id="searchBox">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="searchInput" placeholder="搜索…" autocomplete="off" aria-label="全站搜索">
+        <div class="search-results" id="searchResults" role="listbox"></div>
+      </div>
+  </div>
+</nav>
+
+<!-- ===== 星空系列 ===== -->
+<main class="series-page" id="star">
+
+  <!-- 标题区 -->
+  <header class="series-hero">
+    <div class="sh-bg" aria-hidden="true">
+      <img src="works/star/star-hero.jpg?v=20260903" alt="星空">
+    </div>
+    <div class="wrap sh-inner">
+      <div class="sh-meta">Star Series · 银河 / 流星雨 / 深空</div>
+      <h1 class="sh-title">星空</h1>
+      <p class="sh-sub">追光的人，终将遇见整片星野。</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <!-- 分类筛选 -->
+    <div class="filter-bar reveal">
+      <div class="frow">
+        <span class="f-label">分类</span>
+        <div class="fgroup">
+          <button class="filter-btn on" data-dim="cat" data-val="all">全部</button>
+          <button class="filter-btn" data-dim="cat" data-val="galaxy">银河</button>
+          <button class="filter-btn" data-dim="cat" data-val="trail">星轨</button>
+          <button class="filter-btn" data-dim="cat" data-val="meteor">流星雨</button>
+        </div>
+        <span class="series-count">37 张</span>
+      </div>
+      <div class="frow">
+        <span class="f-label">构图</span>
+        <div class="fgroup">
+          <button class="filter-btn on" data-dim="orient" data-val="all">全部</button>
+          <button class="filter-btn" data-dim="orient" data-val="landscape">横构图</button>
+          <button class="filter-btn" data-dim="orient" data-val="portrait">竖构图</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 作品网格 -->
+    <div class="work-grid">
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2026" data-month="6" data-title="星空 · 富水水库银河" data-sub="STAR" data-img="works/star/star-001.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-001.jpg?v=20260903" alt="富水水库银河" loading="lazy">
+          <span class="work-no">1</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">富水水库银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="meteor" data-orient="landscape" data-year="2025" data-month="12" data-title="星空 · 仙岛湖双子座流星雨" data-sub="STAR" data-img="works/star/star-002.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-002.jpg?v=20260903" alt="仙岛湖双子座流星雨" loading="lazy">
+          <span class="work-no">2</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">仙岛湖双子座流星雨</span>
+          <span class="w-sub">流星雨</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2025" data-month="7" data-title="星空 · 雾云山银河" data-sub="STAR" data-img="works/star/star-003.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-003.jpg?v=20260903" alt="雾云山银河" loading="lazy">
+          <span class="work-no">3</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">雾云山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2025" data-month="5" data-title="星空 · 龙马天文台" data-sub="STAR" data-img="works/star/star-004.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-004.jpg?v=20260903" alt="龙马天文台" loading="lazy">
+          <span class="work-no">4</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">龙马天文台</span>
+          <span class="w-sub">深空</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2025" data-month="5" data-title="星空 · 龙马天文台" data-sub="STAR" data-img="works/star/star-005.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-005.jpg?v=20260903" alt="龙马天文台" loading="lazy">
+          <span class="work-no">5</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">龙马天文台</span>
+          <span class="w-sub">深空</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2025" data-month="2" data-title="星空 · 雾云山冬季拱桥" data-sub="STAR" data-img="works/star/star-006.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-006.jpg?v=20260903" alt="雾云山冬季拱桥" loading="lazy">
+          <span class="work-no">6</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">雾云山冬季拱桥</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2025" data-month="2" data-title="星空 · 雾云山冬季拱桥" data-sub="STAR" data-img="works/star/star-007.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-007.jpg?v=20260903" alt="雾云山冬季拱桥" loading="lazy">
+          <span class="work-no">7</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">雾云山冬季拱桥</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="12" data-title="星空 · 卓奥友峰猎户座" data-sub="STAR" data-img="works/star/star-008.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-008.jpg?v=20260903" alt="卓奥友峰猎户座" loading="lazy">
+          <span class="work-no">8</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">卓奥友峰猎户座</span>
+          <span class="w-sub">深空</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="12" data-title="星空 · 南迦巴瓦峰季星空" data-sub="STAR" data-img="works/star/star-009.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-009.jpg?v=20260903" alt="南迦巴瓦峰季星空" loading="lazy">
+          <span class="work-no">9</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">南迦巴瓦峰季星空</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="trail" data-orient="landscape" data-year="2024" data-month="11" data-title="星空 · 卡瓦格博峰星轨" data-sub="STAR" data-img="works/star/star-010.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-010.jpg?v=20260903" alt="卡瓦格博峰星轨" loading="lazy">
+          <span class="work-no">10</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">卡瓦格博峰星轨</span>
+          <span class="w-sub">星轨</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="11" data-title="星空 · 梅里雪山月照金山星空" data-sub="STAR" data-img="works/star/star-011.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-011.jpg?v=20260903" alt="梅里雪山月照金山星空" loading="lazy">
+          <span class="work-no">11</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">梅里雪山月照金山星空</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2024" data-month="10" data-title="星空 · 大幕山彗星" data-sub="STAR" data-img="works/star/star-012.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-012.jpg?v=20260903" alt="大幕山彗星" loading="lazy">
+          <span class="work-no">12</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">大幕山彗星</span>
+          <span class="w-sub">深空</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2024" data-month="10" data-title="星空 · 三爪山银河" data-sub="STAR" data-img="works/star/star-013.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-013.jpg?v=20260903" alt="三爪山银河" loading="lazy">
+          <span class="work-no">13</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">三爪山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2024" data-month="8" data-title="星空 · 妙山旁银河" data-sub="STAR" data-img="works/star/star-014.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-014.jpg?v=20260903" alt="妙山旁银河" loading="lazy">
+          <span class="work-no">14</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">妙山旁银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="meteor" data-orient="landscape" data-year="2024" data-month="8" data-title="星空 · 神农架英仙座流星雨" data-sub="STAR" data-img="works/star/star-015.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-015.jpg?v=20260903" alt="神农架英仙座流星雨" loading="lazy">
+          <span class="work-no">15</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">神农架英仙座流星雨</span>
+          <span class="w-sub">流星雨</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="meteor" data-orient="portrait" data-year="2024" data-month="8" data-title="星空 · 神农架英仙座流星雨" data-sub="STAR" data-img="works/star/star-016.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-016.jpg?v=20260903" alt="神农架英仙座流星雨" loading="lazy">
+          <span class="work-no">16</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">神农架英仙座流星雨</span>
+          <span class="w-sub">流星雨</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="8" data-title="星空 · 古炎湾银河" data-sub="STAR" data-img="works/star/star-017.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-017.jpg?v=20260903" alt="古炎湾银河" loading="lazy">
+          <span class="work-no">17</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">古炎湾银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="8" data-title="星空 · 雾云山萤火虫银河" data-sub="STAR" data-img="works/star/star-018.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-018.jpg?v=20260903" alt="雾云山萤火虫银河" loading="lazy">
+          <span class="work-no">18</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">雾云山萤火虫银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="8" data-title="星空 · 阿坝县星空" data-sub="STAR" data-img="works/star/star-019.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-019.jpg?v=20260903" alt="阿坝县星空" loading="lazy">
+          <span class="work-no">19</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">阿坝县星空</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="8" data-title="星空 · 莲宝叶则星空" data-sub="STAR" data-img="works/star/star-020.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-020.jpg?v=20260903" alt="莲宝叶则星空" loading="lazy">
+          <span class="work-no">20</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">莲宝叶则星空</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="trail" data-orient="landscape" data-year="2024" data-month="7" data-title="星空 · 荆州星轨" data-sub="STAR" data-img="works/star/star-021.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-021.jpg?v=20260903" alt="荆州星轨" loading="lazy">
+          <span class="work-no">21</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">荆州星轨</span>
+          <span class="w-sub">星轨</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2024" data-month="7" data-title="星空 · 妙山脚银河" data-sub="STAR" data-img="works/star/star-022.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-022.jpg?v=20260903" alt="妙山脚银河" loading="lazy">
+          <span class="work-no">22</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">妙山脚银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2024" data-month="7" data-title="星空 · 妙山脚银河" data-sub="STAR" data-img="works/star/star-023.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-023.jpg?v=20260903" alt="妙山脚银河" loading="lazy">
+          <span class="work-no">23</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">妙山脚银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="6" data-title="星空 · 道观河银河" data-sub="STAR" data-img="works/star/star-024.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-024.jpg?v=20260903" alt="道观河银河" loading="lazy">
+          <span class="work-no">24</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">道观河银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2024" data-month="6" data-title="星空 · 九宫山银河" data-sub="STAR" data-img="works/star/star-025.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-025.jpg?v=20260903" alt="九宫山银河" loading="lazy">
+          <span class="work-no">25</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">九宫山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="6" data-title="星空 · 九宫山银河" data-sub="STAR" data-img="works/star/star-026.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-026.jpg?v=20260903" alt="九宫山银河" loading="lazy">
+          <span class="work-no">26</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">九宫山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="5" data-title="星空 · 大悟仙居顶银河" data-sub="STAR" data-img="works/star/star-027.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-027.jpg?v=20260903" alt="大悟仙居顶银河" loading="lazy">
+          <span class="work-no">27</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">大悟仙居顶银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="5" data-title="星空 · 云雾山银河日出" data-sub="STAR" data-img="works/star/star-028.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-028.jpg?v=20260903" alt="云雾山银河日出" loading="lazy">
+          <span class="work-no">28</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">云雾山银河日出</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="5" data-title="星空 · 云雾山银拱" data-sub="STAR" data-img="works/star/star-029.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-029.jpg?v=20260903" alt="云雾山银拱" loading="lazy">
+          <span class="work-no">29</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">云雾山银拱</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2024" data-month="5" data-title="星空 · 妙山路银河" data-sub="STAR" data-img="works/star/star-030.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-030.jpg?v=20260903" alt="妙山路银河" loading="lazy">
+          <span class="work-no">30</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">妙山路银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2023" data-month="11" data-title="星空 · 大悟仙居顶银河" data-sub="STAR" data-img="works/star/star-031.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-031.jpg?v=20260903" alt="大悟仙居顶银河" loading="lazy">
+          <span class="work-no">31</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">大悟仙居顶银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2023" data-month="11" data-title="星空 · 富水水库星空" data-sub="STAR" data-img="works/star/star-032.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-032.jpg?v=20260903" alt="富水水库星空" loading="lazy">
+          <span class="work-no">32</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">富水水库星空</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="portrait" data-year="2023" data-month="9" data-title="星空 · 白云山银河" data-sub="STAR" data-img="works/star/star-033.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-033.jpg?v=20260903" alt="白云山银河" loading="lazy">
+          <span class="work-no">33</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">白云山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="meteor" data-orient="landscape" data-year="2023" data-month="8" data-title="星空 · 安徽英仙座流星雨" data-sub="STAR" data-img="works/star/star-034.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-034.jpg?v=20260903" alt="安徽英仙座流星雨" loading="lazy">
+          <span class="work-no">34</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">安徽英仙座流星雨</span>
+          <span class="w-sub">流星雨</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2023" data-month="4" data-title="星空 · 大洪山银河" data-sub="STAR" data-img="works/star/star-035.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-035.jpg?v=20260903" alt="大洪山银河" loading="lazy">
+          <span class="work-no">35</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">大洪山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2023" data-month="4" data-title="星空 · 大洪山银河" data-sub="STAR" data-img="works/star/star-036.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-036.jpg?v=20260903" alt="大洪山银河" loading="lazy">
+          <span class="work-no">36</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">大洪山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+      <div class="work-card reveal" data-cat="galaxy" data-orient="landscape" data-year="2023" data-month="4" data-title="星空 · 大洪山银河" data-sub="STAR" data-img="works/star/star-037.jpg?v=20260903">
+        <div class="w-media">
+          <img src="works/star/star-037.jpg?v=20260903" alt="大洪山银河" loading="lazy">
+          <span class="work-no">37</span>
+        </div>
+        <div class="work-cap">
+          <span class="w-name">大洪山银河</span>
+          <span class="w-sub">银河</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分页器 -->
+    <div class="pagination reveal">
+      <button class="p-btn p-prev disabled">上一页</button>
+      <span class="p-num">1 / 1</span>
+      <button class="p-btn p-next disabled">下一页</button>
+    </div>
+
+    <!-- NEXT 导航 -->
+    <div class="next-bar reveal">
+      <div>
+        <div class="nb-label">NEXT · 下一系列</div>
+        <div class="nb-title">城市</div>
+      </div>
+      <a class="nb-link" href="city.html">进入城市
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="signature reveal">杨创宇 · Nemo 爱拍照<span>NIGHT IS MY STUDIO</span></div>
+  </div>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="wrap">
+      <div class="footer-main">
+      <div class="footer-brand">
+        <div class="name">杨创宇 · Nemo 爱拍照</div>
+        <p>记录夜空与城市里的光 · 常驻武汉 · 长期追星中</p>
+      </div>
+      <div class="footer-social">
+        <a class="social-link" href="https://weibo.com/u/6594337965" target="_blank" rel="noopener">微博</a>
+        <a class="social-link" href="https://v.douyin.com/t9dT2E6qMxQ/" target="_blank" rel="noopener">抖音</a>
+<a class="social-link" href="https://space.bilibili.com/281006014" target="_blank" rel="noopener">Bilibili</a>
+        <a class="social-link" href="https://xhslink.cn/m/5yzmBNRY4lk" target="_blank" rel="noopener">小红书</a>
+</div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 杨创宇 · 保留所有权利</span>
+      <span>NIGHT IS MY STUDIO</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 灯箱 ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <span class="lb-close" id="lbClose" aria-label="关闭"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+  <figure class="lb-stage">
+    <img id="lbImg" src="" alt="">
+    <figcaption class="lb-cap" id="lbCap"></figcaption>
+  </figure>
+</div>
+
+
+<script src="app.js?v=20260905e"></script>
+</body>
+</html>
+

@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<style>html{background:#000;}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杨创宇 · Nemo 爱拍照 — 风光 / 星空 / 城市延时</title>
+<meta name="description" content="杨创宇（Nemo爱拍照），Stargazer・拾星客创始人、8KRAW签约摄影师、星联CSVA成员，常驻武汉的风光与星空摄影师，擅长延时、星空与城市风光摄影。">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="style.css?v=20260906sc">
+</head>
+<body data-page="index">
+
+<!-- ===== 导航 ===== -->
+<nav class="nav" aria-label="主导航">
+  <a class="brand" href="index.html" aria-label="返回首页">
+    <img class="brand-mark" src="works/brand/stargazer_logo_gold2.png" alt="杨创宇 Nemo 爱拍照">
+    <span>
+      <span class="brand-name">杨创宇</span>
+      <span class="brand-sub">Nemo 爱拍照</span>
+    </span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">首页</a>
+    <a href="works.html">系列作品</a>
+      <div class="nav-item nav-drop" id="dropWorks">
+    <a class="nav-drop-btn" href="works.html">作品<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+    <div class="nav-drop-menu">
+      <a href="star.html">星空<span class="cd-en">STAR</span></a>
+      <a href="city.html">城市<span class="cd-en">CITY</span></a>
+      <a href="nature.html">自然<span class="cd-en">NATURE</span></a>
+      <a href="films.html">旅拍<span class="cd-en">TRAVEL</span></a>
+    </div>
+  </div>
+    <a href="films.html">视频</a>
+      <div class="nav-item nav-drop" id="dropTutorial">
+    <a class="nav-drop-btn" href="tutorial.html">教程<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+    <div class="nav-drop-menu">
+      <a href="tutorial.html#pre">前期教程<span class="cd-en">PRE</span></a>
+      <a href="tutorial.html#post">后期教程<span class="cd-en">POST</span></a>
+      <a href="tutorial.html">全部教程<span class="cd-en">ALL</span></a>
+    </div>
+  </div>
+    <a href="commercial.html">合作</a>
+    <a href="about.html">关于</a>
+    <div class="search-box" id="searchBox">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="searchInput" placeholder="搜索…" autocomplete="off" aria-label="全站搜索">
+        <div class="search-results" id="searchResults" role="listbox"></div>
+      </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="works/star/star-001.jpg">
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-kicker reveal">Nemo 爱拍照 · 风光 / 星空 / 城市延时</div>
+    <h1 class="hero-name reveal">用镜头追逐<br><em>星光与城市灯火</em></h1>
+    <p class="hero-sub reveal">Stargazer・拾星客创始人 · 8KRAW 签约摄影师 · 星联 CSVA 成员。从武汉的江畔朝霞到冈仁波齐的星空，记录变化中的天地与人间。</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="works.html">浏览作品
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="films.html">观看旅拍</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 精选分类 ===== -->
+<section class="works" id="featured">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Featured</span>
+      <span class="kicker-zh">摄影分类</span>
+    </div>
+
+    <!-- 栏目下拉框 -->
+    <div class="cat-drop reveal" id="catDrop">
+      <button class="cat-drop-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+        快速浏览作品栏目
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="cat-drop-menu" role="listbox">
+        <a href="star.html">星空<span class="cd-en">STAR</span></a>
+        <a href="city.html">城市<span class="cd-en">CITY</span></a>
+        <a href="nature.html">自然<span class="cd-en">NATURE</span></a>
+        <a href="films.html">旅拍<span class="cd-en">TRAVEL</span></a>
+        <a href="tutorial.html">摄影教程<span class="cd-en">TUTORIAL</span></a>
+        <a href="works.html">系列作品<span class="cd-en">SERIES</span></a>
+      </div>
+    </div>
+
+    <div class="feat-grid">
+      <a class="feat-card reveal" href="star.html">
+        <img src="works/star/star-001.jpg" alt="星空">
+        <div class="f-cap">
+          <span class="f-en">STAR</span>
+          <div class="f-cn">星空</div>
+        </div>
+      </a>
+      <a class="feat-card reveal" href="city.html">
+        <img src="works/city/hero-city.jpg" alt="城市">
+        <div class="f-cap">
+          <span class="f-en">CITY</span>
+          <div class="f-cn">城市</div>
+        </div>
+      </a>
+      <a class="feat-card reveal" href="nature.html">
+        <img src="works/nature/feature-nature.jpg" alt="自然">
+        <div class="f-cap">
+          <span class="f-en">NATURE</span>
+          <div class="f-cn">自然</div>
+        </div>
+      </a>
+      <a class="feat-card reveal" href="films.html">
+        <img src="works/nature/travel-nature.jpg" alt="旅拍">
+        <div class="f-cap">
+          <span class="f-en">TRAVEL</span>
+          <div class="f-cn">旅拍</div>
+        </div>
+      </a>
+    </div>
+    <div class="signature reveal" style="margin-top:clamp(14px,1.8vw,22px)">
+      <a class="btn btn-ghost" href="works.html">进入全部作品
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 精选作品瀑布流 ===== -->
+<section class="selected" id="selected">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Selected</span>
+      <span class="kicker-zh">精选作品</span>
+    </div>
+    <div class="feat-wide reveal">
+      <a class="feat-wide-link" href="nature.html">
+        <img src="works/featured/山川-049.jpg" alt="自然 · 珠峰日照金山" loading="lazy">
+        <div class="feat-wide-shade"></div>
+        <div class="feat-wide-cap">
+          <span class="fw-en">NATURE · PANORAMA</span>
+          <span class="fw-cn">加乌拉山口 · 珠峰日照金山</span>
+        </div>
+      </a>
+    </div>
+    <div class="masonry reveal">
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">01</span>
+        <img
+         src="works/featured/star-005.jpg" alt="STAR · 观星台" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">STAR</span><span class="ms-cn">观星台</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">02</span>
+        <img
+         src="works/featured/star-006.jpg" alt="STAR · 追光者" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">STAR</span><span class="ms-cn">追光者</span></div></div>
+      <div class="ms-item" style="--ar:0.44">
+        <span class="ms-no">03</span>
+        <img
+         src="works/featured/star-016.jpg" alt="STAR · 银河垂落" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">STAR</span><span class="ms-cn">银河垂落</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">04</span>
+        <img
+         src="works/featured/star-017.jpg" alt="STAR · 星瀑" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">STAR</span><span class="ms-cn">星瀑</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">05</span>
+        <img
+         src="works/featured/star-018.jpg" alt="NATURE · 银河梯田" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">NATURE</span><span class="ms-cn">银河梯田</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">06</span>
+        <img
+         src="works/featured/丽江-007.jpg" alt="NATURE · 雪山古城" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">NATURE</span><span class="ms-cn">雪山古城</span></div></div>
+      <div class="ms-item" style="--ar:3/4">
+        <span class="ms-no">07</span>
+        <img
+         src="works/featured/南京-001.jpg" alt="CITY · 金陵天际" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">CITY</span><span class="ms-cn">金陵天际</span></div></div>
+      <div class="ms-item" style="--ar:3/4">
+        <span class="ms-no">08</span>
+        <img
+         src="works/featured/天津-005.jpg" alt="CITY · 津门夜色" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">CITY</span><span class="ms-cn">津门夜色</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">09</span>
+        <img
+         src="works/featured/山川-040.jpg" alt="NATURE · 雪山河谷" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">NATURE</span><span class="ms-cn">雪山河谷</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">10</span>
+        <img
+         src="works/featured/山川-115.jpg" alt="NATURE · 山涧瀑布" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">NATURE</span><span class="ms-cn">山涧瀑布</span></div></div>
+      <div class="ms-item" style="--ar:16/10">
+        <span class="ms-no">11</span>
+        <img
+         src="works/featured/山川-121.jpg" alt="NATURE · 日照金山" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">NATURE</span><span class="ms-cn">日照金山</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">12</span>
+        <img
+         src="works/featured/河流-012.jpg" alt="NATURE · 湖光暮色" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">NATURE</span><span class="ms-cn">湖光暮色</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">13</span>
+        <img
+         src="works/featured/洛阳-021.jpg" alt="CITY · 龙门夜影" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">CITY</span><span class="ms-cn">龙门夜影</span></div></div>
+      <div class="ms-item" style="--ar:16/10">
+        <span class="ms-no">14</span>
+        <img
+         src="works/featured/海洋-086.jpg" alt="NATURE · 海畔晚霞" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">NATURE</span><span class="ms-cn">海畔晚霞</span></div></div>
+      <div class="ms-item" style="--ar:3/4">
+        <span class="ms-no">15</span>
+        <img
+         src="works/featured/深圳-006.jpg" alt="CITY · 鹏城雾影" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">CITY</span><span class="ms-cn">鹏城雾影</span></div></div>
+      <div class="ms-item" style="--ar:4/3">
+        <span class="ms-no">16</span>
+        <img
+         src="works/featured/重庆-021.jpg" alt="CITY · 山城夜色" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">CITY</span><span class="ms-cn">山城夜色</span></div></div>
+      <div class="ms-item" style="--ar:3/4">
+        <span class="ms-no">17</span>
+        <img
+         src="works/featured/青岛-001.jpg" alt="CITY · 岛城海岸" loading="lazy">
+        <div class="ms-cap"><span class="ms-en">CITY</span><span class="ms-cn">岛城海岸</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="wrap">
+      <div class="footer-main">
+      <div class="footer-brand">
+        <div class="name">杨创宇 · Nemo 爱拍照</div>
+        <p>记录夜空与城市里的光 · 常驻武汉 · 长期追星中</p>
+      </div>
+      <div class="footer-social">
+        <a class="social-link" href="https://weibo.com/u/6594337965" target="_blank" rel="noopener">微博</a>
+        <a class="social-link" href="https://v.douyin.com/t9dT2E6qMxQ/" target="_blank" rel="noopener">抖音</a>
+<a class="social-link" href="https://space.bilibili.com/281006014" target="_blank" rel="noopener">Bilibili</a>
+        <a class="social-link" href="https://xhslink.cn/m/5yzmBNRY4lk" target="_blank" rel="noopener">小红书</a>
+</div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 杨创宇 · 保留所有权利</span>
+      <span>NIGHT IS MY STUDIO</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 精选图片灯箱 ===== -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="关闭">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="上一张">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <figure class="lb-stage">
+    <img id="lbImg" class="lb-img" src="" alt="精选图片">
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="下一张">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <figcaption class="lb-cap">
+    <span class="lb-en"></span>
+    <span class="lb-cn"></span>
+  </figcaption>
+</div>
+
+<script src="app.js?v=20260905e"></script>
+</body>
+</html>
+
